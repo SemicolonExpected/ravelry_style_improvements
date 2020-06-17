@@ -2168,8 +2168,13 @@ body.topics #quicknav {width: 120px}
 #quicknav li.title {height: 1em; overflow: hidden; margin-bottom: 0.5em; padding: 3px}
 #quicknav li img {vertical-align: middle; margin-right: 4px}
 #getting_started .showcase {margin-top: 2em}
-#getting_started .screenshot {width: 500px; float: left}
+@media print, screen and (min-width: 480px) {#getting_started .screenshot {width: 500px; float: left}
+#getting_started .screenshot img {width: 500px; max-width: 90vw}
 #getting_started .info {width: 320px; float: left; padding-left: 30px}
+}
+@media screen and (max-width: 479px) {#getting_started .screenshot img {width: 100%; margin-left: auto; margin-right: auto; display: block}
+#getting_started .info {margin-top: 12px; margin-bottom: 60px}
+}
 #getting_started .info .title {font-size: 1.2em; font-weight: bold; padding-bottom: 1em}
 #getting_started .info p {margin-bottom: 1em}
 img#helpful_button {border: none; padding: 0; vertical-align: middle}
